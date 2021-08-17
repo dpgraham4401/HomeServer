@@ -3,14 +3,35 @@
   <head>
     <meta charset="utf-8">
     <title>Remote Control</title>
+	<link href="Assets/Icons/AppIcon-120x120.png" rel="apple-touch-icon" />
+	<link href="Assets/Icons/AppIcon-57x57.png" rel="apple-touch-icon" sizes="57x57" />
+	<link href="Assets/Icons/AppIcon-180x180.png" rel="apple-touch-icon" sizes="180x180" />
+	<link href="Assets/Icons/AppIcon-114x114.png" rel="icon" sizes="114x114" />
+	<link href="Assets/Css/remote.css" rel="stylesheet">
+	<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
   </head>
   <body>
-    <h1>Remote Control</h1>
-    <button id="volDownButton">Volume Down</button>
-    <button id="volUpButton">Volume Up</button>
-    <button id="previousButton">Previous</button>
-    <button id="playPauseButton">Play/Pause</button>
-    <button id="nextButton">Next</button>
+	  <section id="main">
+	    <div id="volumeControl" class="ctrContainer">
+		  <button class="btn volume" id="volDownButton">
+			  <i class="fas fa-volume-down"></i>
+		  </button>
+		  <button class="btn volume" id="volUpButton">
+			  <i class="fas fa-volume-up"></i>
+		  </button>
+	    </div>
+	    <div id="playerControl" class="ctrContainer">
+		  <button class="btn playerCtl" id="previousButton">
+			  <i class="fas fa-backward"></i>
+		  </button>
+		  <button class="btn playerCtl" id="playPauseButton">
+			  <i class="fas fa-play"></i>
+		  </button>
+		  <button class="btn playerCtl" id="nextButton">
+			  <i class="fas fa-forward"></i>
+		  </button>
+	    </div>
+	  </section>
   </body>
   <script src="client.js"></script>
 </html>
