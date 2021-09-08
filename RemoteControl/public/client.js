@@ -9,9 +9,11 @@ const nextButton = document.getElementById('nextButton');
 downButton.addEventListener('click', function(e) {
   console.log('button was clicked');
   fetch('/volDown', {method: 'POST'})
-    .then(function(response) {
-      if(response.ok) {
+    .then(function(res) {
+      // console.log(res)
+      if(res.ok) {
         console.log('click was Good');
+        //console.log(res.text())
         return;
       }
       throw new Error('Request failed.')
@@ -24,8 +26,8 @@ downButton.addEventListener('click', function(e) {
 upButton.addEventListener('click', function(e) {
   console.log('button was clicked');
   fetch('/volUp', {method: 'POST'})
-    .then(function(response) {
-      if(response.ok) {
+    .then(function(res) {
+      if(res.ok) {
         console.log('click was Good');
         return;
       }
@@ -39,8 +41,8 @@ upButton.addEventListener('click', function(e) {
 prevButton.addEventListener('click', function(e) {
   console.log('previous button was clicked');
   fetch('/previous', {method: 'POST'})
-    .then(function(response) {
-      if(response.ok) {
+    .then(function(res) {
+      if(res.ok) {
         console.log('click was Good');
         return;
       }
@@ -54,8 +56,8 @@ prevButton.addEventListener('click', function(e) {
 playButton.addEventListener('click', function(e) {
   console.log('play button was clicked');
   fetch('/playPause', {method: 'POST'})
-    .then(function(response) {
-      if(response.ok) {
+    .then(function(res) {
+      if(res.ok) {
         console.log('click was Good');
         return;
       }
@@ -69,8 +71,8 @@ playButton.addEventListener('click', function(e) {
 nextButton.addEventListener('click', function(e) {
   console.log('next button was clicked');
   fetch('/next', {method: 'POST'})
-    .then(function(response) {
-      if(response.ok) {
+    .then(function(res) {
+      if(res.ok) {
         console.log('click was Good');
         return;
       }
