@@ -1,0 +1,421 @@
+/* RESPONSIVE PART */
+
+@media screen and (max-width: 1450px) {    
+
+    .header-logo
+    {
+        padding-top: 10%;
+    }
+
+    .blog-item-holder .entry-content .content-1170
+    {
+        padding-bottom: 100px;
+        padding-top: 100px;
+    }
+
+    .blog-item-holder .testimonial-top-quotes
+    {
+        margin-top: 80px;
+    }
+
+    .single-post article
+    {
+        padding-top: 80px;
+    }
+
+}
+
+/* @media screen and (max-width: 1340px) {    
+
+    blockquote.inline-blockquote
+    {
+        display: block;
+        margin: 50px 0;
+        width: auto;
+    }
+
+    .blog-top-content
+    {
+        padding-bottom: 150px;
+    }
+} */
+
+@media screen and (max-width: 1220px) {    
+
+    .content-1030, .content-1170, .content-770
+    {
+        max-width: 90%;
+    }
+
+    .page-template-default article .content-1170 .content-1030
+    {
+        max-width: 100%;
+    }
+
+    .single-post .background-image-holder
+    {
+        position: relative;
+    }
+
+    .single-post article
+    {
+        padding: 10% 0;
+        margin: 0;
+    }
+
+    .single-post .no-background-image-holder
+    {
+        position: relative;
+        height: 150px;
+    }   
+
+    .team-holder .member-info
+    {
+        position: relative !important;
+        display: block !important;
+        opacity: 1 !important;
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+    .team-holder .member-name
+    {
+        padding-top: 0;
+    }
+
+    .single-post h1.entry-title
+    {
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    .single-post .nav-previous, .single-post .nav-next
+    {
+        display: block;
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .single-post .nav-previous.no-more-posts, .single-post .nav-next.no-more-posts
+    {
+        display: none;
+    }
+
+    .single-post .nav-previous-content, .single-post .nav-next-content
+    {
+        max-width: none;
+        float: none;
+        padding-top: 135px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 0;
+    }
+
+
+}
+
+@media screen and (max-width: 1066px) {    
+
+
+    .footer ul li 
+    {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        text-align: center;
+    }
+
+    .page-pagination-holder .previous-post-link 
+    {
+        display: block;
+        width: 100%;
+        float: none;
+        padding: 50px 0px;
+        text-align: center;
+        padding-right: 0;
+        font-size: 25px;
+    }
+
+    .page-pagination-holder .next-post-link 
+    {
+        display: block;
+        width: 100%;
+        float: none;
+        padding: 50px 0px;
+        text-align: center;
+        padding-left: 0;
+        font-size: 25px;
+    }
+
+    .page-pagination-holder .no-next-post-link
+    {
+        display: none;
+    }
+
+    .page-header-map #map 
+    {
+        height: 300px;
+    }    
+
+}
+
+
+@media screen and (max-width: 1020px) {    
+
+    .one_half, .one_third, .one_fourth, .two_third, .three_fourth, .one_half.margin-0, .one_third.margin-0, .two_third.margin-0, .one_fourth.margin-0, .three_fourth.margin-0
+    {
+        width: 100%;
+        float: none;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .page-header-image .logo-holder img, .page-header-map .logo-holder img
+    {
+        max-width: 50px !important;
+        height: auto;
+        border-width: 5px;
+    }
+
+}
+
+
+@media screen and (max-width: 925px) {    
+
+    .gallery-text-holder 
+    {
+        top: 10px;
+        left: 10px;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .search-field
+    {
+        position: relative;
+    }
+
+    .main-menu
+    {
+        float: none;
+        margin: 0 auto;
+        text-align: center;
+        max-width: 300px;
+        width: 100%;
+        position: relative;
+        z-index: 9999;
+    }
+
+    .main-menu ul 
+    {
+        width: 12em; /* fixed width only please - you can use the "subMenusMinWidth"/"subMenusMaxWidth" script options to override this if you like */
+    }
+
+    .sm-clean a, .sm-clean a:hover, .sm-clean a:focus, .sm-clean a:active
+    {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .main-menu.sm-clean
+    {
+        padding-bottom: 40px;
+    }
+
+    .single-post .nav-previous, .single-post .nav-next
+    {
+        display: block;        
+        text-align: center;
+        max-width: none;
+        float: none;
+    }
+
+    .blog-top-content
+    {
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .header-logo
+    {
+        padding-top: 190px;
+    }
+
+    .blog-top-content-holder h1.entry-title 
+    {
+        font-size: 36px;
+        line-height: 42px;        
+    }
+
+    .blog-top-content-holder p.site-description 
+    {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .blog-item-holder .entry-content .entry-title 
+    {
+        font-size: 38px;
+        line-height: 45px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .testimonial-top-quotes
+    {
+        font-size: 200px;
+        margin-top: 50px;
+    }
+
+    .page-template-default .testimonial-top-quotes
+    {
+        font-size: 200px;        
+        padding-top: 20px;
+        padding-bottom: 50px;
+        margin-top: 0;
+    }
+
+    .slides.testimonial
+    {
+        font-size: 27px;
+        line-height: 37px;
+    }
+
+    .testimonial_slider_holder, .page-template-default .testimonial_slider_holder
+    {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .blog-item-holder .entry-content .content-1170
+    {
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+
+    .blog.paged .blog-item-holder:first-of-type .entry-content .content-1170
+    {
+        padding-top: 120px;
+    }
+
+    .blog-item-holder .video-popup, .blog-item-holder .read-more-holder
+    {
+        margin-top: 50px;
+    }    
+
+    .single-post .post-info .post-date, .single-post .post-info .cat-links, .single-post .post-info .post-num-comments
+    {
+        display: block;
+    }
+
+    .single-post .post-info .cat-links:before, .single-post .post-info .post-num-comments:before
+    {
+        display: none;
+    }
+
+    .blog-item-holder .entry-content .num-comments:before, .blog-item-holder .entry-content .published:after
+    {
+        display: none;
+    }
+
+    .team-holder .one_third, .team-holder .one_half, .team-holder .one_fourth
+    {
+        float: none;
+        width: 100%;
+    }    
+
+    .page-template-page-gallery h1.entry-title
+    {
+        padding-top: 150px;
+    }
+
+    .scroll-top
+    {
+        width: 50px;
+        height: 50px;
+        right: 10px;
+    }
+
+    .scroll-top img:hover
+    {
+        margin-top: -50px;
+    }
+
+    .single-post .tags-holder
+    {
+        margin-top: 50px;
+    }
+
+    ul#footer-sidebar li.widget 
+    {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+
+
+@media screen and (max-width: 650px) {  
+
+    .header-holder
+    {
+        top: 40px;        
+    }
+
+    .blog.logged-in .header-holder
+    {
+        top: -6px;
+    }
+
+    .toggle-holder
+    {
+        margin-right: 30px;
+    }
+
+    .main-menu.sm-clean
+    {
+        padding-top: 120px;
+    }
+
+    .header-logo 
+    {
+        padding-top: 120px;
+    }
+
+    .page-header-image, .page-header-map, .page .page-header-no-image
+    {
+        margin-bottom: 50px;
+    }
+
+    .grid-sizer, .grid-item, .grid-item.p_one, .grid-item.p_two_third
+    {
+        width: 100% !important;
+    }
+
+    .page-template-page-gallery .more-posts, .page-template-page-gallery .more-posts-loading, .page-template-page-gallery .no-more-posts
+    {
+        font-size: 25px;
+    }
+
+    .blog-top-content-holder h1.entry-title 
+    {
+        font-size: 31px;
+        line-height: 33px;
+    }
+
+    .single-post h1.entry-title 
+    {
+        font-size: 31px;
+        line-height: 38px;
+    }
+
+    .single-post .post-info .post-date, .single-post .post-info .cat-links, .single-post .post-info .post-num-comments
+    {
+        font-size: 16px;
+    }   
+
+}

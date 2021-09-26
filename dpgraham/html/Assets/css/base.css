@@ -1,0 +1,655 @@
+/* BASE ITEMS */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, code, em, img, q, strong, sub, var,
+b, i, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline: none;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+nav ul,ul,ol {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+	outline: none;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+} */
+
+input, select {
+    vertical-align:middle;
+}
+
+input:focus, textarea:focus
+{
+    outline: none;
+}
+
+.block
+{
+    display: block;
+}
+.hidden
+{
+    display: none;
+}
+.clear
+{
+    clear: both;
+}
+.left
+{
+    float: left;
+}
+.right
+{
+    float: right;
+}
+.center-relative
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+.center-text
+{
+    text-align: center !important;
+}
+.absolute
+{
+    position: absolute;
+}
+.fixed
+{
+    position: fixed;
+}
+.relative
+{
+    position: relative;
+}
+blockquote
+{
+    margin-top: 70px;
+    margin-bottom: 60px;
+    font-family: 'Montserrat', sans-serif, Arial;
+    font-size: 24px;
+    line-height: 44px;
+    color: #b5b5b5;
+}
+blockquote.inline-blockquote
+{
+    width: 480px;
+    float: left;
+    margin-left: -170px;
+    margin-right: 70px;
+}
+a.button
+{
+    display: inline-block;
+    border: 3px solid;
+    text-align: center;
+    padding: 15px 40px;
+    cursor: pointer;
+    margin-bottom: 25px;
+    vertical-align: middle;
+    text-decoration: none;
+}
+a.button:active
+{
+    position: relative;
+    top: 1px;	
+}
+h1,h2,h3,h4,h5,h6
+{
+    padding: 20px 0;
+}
+h1
+{
+    font-size: 38px;
+    line-height: 38px;    
+}
+h2
+{
+    font-size: 34px;    
+    line-height: 34px;    
+}
+h3
+{
+    font-size: 32px;  
+    line-height: 32px;    
+}
+
+/* MOBILE FIRST */
+
+@media (min-width: 925px) {
+    /* Switch to desktop layout
+    -----------------------------------------------
+       These transform the menu tree from
+       collapsible to desktop (navbar + dropdowns)
+    -----------------------------------------------*/
+    /* start... (it's not recommended editing these rules) */
+    .sm-clean ul {
+        position: absolute;
+    }
+
+    .sm-clean li {
+        display: inline-block;
+    }
+
+    .sm-clean.sm-rtl li {
+        float: right;
+    }
+
+    .sm-clean ul li, .sm-clean.sm-rtl ul li, .sm-clean.sm-vertical li {
+        float: none;
+    }
+
+    .sm-clean a {
+        white-space: nowrap;
+    }
+
+    .sm-clean ul a, .sm-clean.sm-vertical a {
+        white-space: normal;
+    }
+
+    .sm-clean .sm-nowrap > li > a, .sm-clean .sm-nowrap > li > :not(ul) a {
+        white-space: nowrap;
+    }
+
+    /* ...end */
+    .sm-clean {
+        padding: 0 10px;
+        background: #eeeeee;
+        -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
+        -ms-border-radius: 100px;
+        -o-border-radius: 100px;
+        border-radius: 100px;
+    }
+    .sm-clean a, .sm-clean a:hover, .sm-clean a:focus, .sm-clean a:active, .sm-clean a.highlighted {
+        padding: 12px 12px;
+        -webkit-border-radius: 0 !important;
+        -moz-border-radius: 0 !important;
+        -ms-border-radius: 0 !important;
+        -o-border-radius: 0 !important;
+        border-radius: 0 !important;
+    }
+
+    .sm-clean a.has-submenu {
+        padding-right: 24px;
+    }
+    .sm-clean a span.sub-arrow {
+        top: 0;
+        margin-top: 3px;
+        right: -3px;
+        width: 34px;
+        height: 34px;
+        background: transparent;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+        border-radius: 0;
+    }
+    .sm-clean a.highlighted span.sub-arrow:before {
+        display: none;
+    }
+    .sm-clean li {
+        border-top: 0;
+    }    
+    .sm-clean > li > ul:after {
+        top: -16px;
+        left: 31px;
+        border-width: 8px;
+        border-color: transparent transparent white transparent;
+    }
+    .sm-clean ul {
+        padding: 5px 0;
+    }
+    .sm-clean ul a, .sm-clean ul a:hover, .sm-clean ul a:focus, .sm-clean ul a:active, .sm-clean ul a.highlighted {
+        border: 0 !important;
+        padding: 12px;
+    }
+    .sm-clean ul a.disabled {
+        background: white;
+        color: #cccccc;
+    }
+    .sm-clean ul a.has-submenu {
+        padding-right: 20px;
+    }
+    .sm-clean ul a span.sub-arrow {
+        right: 28px;
+        top: 0;
+        margin-top: 3px;
+        border: 0;
+    }
+    .sm-clean span.scroll-up,
+    .sm-clean span.scroll-down {
+        position: absolute;
+        display: none;
+        visibility: hidden;
+        overflow: hidden;
+        background: white;
+        height: 20px;
+    }
+    .sm-clean span.scroll-up:hover,
+    .sm-clean span.scroll-down:hover {
+        background: #eeeeee;
+    }
+    .sm-clean span.scroll-up-arrow, .sm-clean span.scroll-down-arrow {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -6px;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        border-width: 6px;
+        border-style: dashed dashed solid dashed;
+        border-color: transparent transparent #555555 transparent;
+    }
+    .sm-clean span.scroll-down-arrow {
+        top: 8px;
+        border-style: solid dashed dashed dashed;
+        border-color: #555555 transparent transparent transparent;
+    }
+    .sm-clean.sm-rtl a.has-submenu {
+        padding-right: 12px;
+        padding-left: 24px;
+    }
+    .sm-clean.sm-rtl a span.sub-arrow {
+        right: auto;
+        left: 12px;
+    }
+    .sm-clean.sm-rtl.sm-vertical a.has-submenu {
+        padding: 10px 20px;
+    }
+    .sm-clean.sm-rtl.sm-vertical a span.sub-arrow {
+        right: auto;
+        left: 8px;
+        border-style: dashed solid dashed dashed;
+        border-color: transparent #555555 transparent transparent;
+    }
+    .sm-clean.sm-rtl > li > ul:before {
+        left: auto;
+        right: 30px;
+    }
+    .sm-clean.sm-rtl > li > ul:after {
+        left: auto;
+        right: 31px;
+    }
+    .sm-clean.sm-rtl ul a.has-submenu {
+        padding: 10px 20px !important;
+    }
+    .sm-clean.sm-rtl ul a span.sub-arrow {
+        right: auto;
+        left: 8px;
+        border-style: dashed solid dashed dashed;
+        border-color: transparent #555555 transparent transparent;
+    }
+    .sm-clean.sm-vertical {
+        padding: 10px 0;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        border-radius: 5px;
+    }
+    .sm-clean.sm-vertical a {
+        padding: 10px 20px;
+    }
+    .sm-clean.sm-vertical a:hover, .sm-clean.sm-vertical a:focus, .sm-clean.sm-vertical a:active, .sm-clean.sm-vertical a.highlighted {
+        background: white;
+    }
+    .sm-clean.sm-vertical a.disabled {
+        background: #eeeeee;
+    }
+    .sm-clean.sm-vertical a span.sub-arrow {
+        right: 8px;
+        top: 50%;
+        margin-top: -5px;
+        border-width: 5px;
+        border-style: dashed dashed dashed solid;
+        border-color: transparent transparent transparent #555555;
+    }
+    .sm-clean.sm-vertical > li > ul:before,
+    .sm-clean.sm-vertical > li > ul:after {
+        display: none;
+    }
+    .sm-clean.sm-vertical ul a {
+        padding: 10px 20px;
+    }
+    .sm-clean.sm-vertical ul a:hover, .sm-clean.sm-vertical ul a:focus, .sm-clean.sm-vertical ul a:active, .sm-clean.sm-vertical ul a.highlighted {
+        background: #eeeeee;
+    }
+    .sm-clean.sm-vertical ul a.disabled {
+        background: white;
+    }
+}
+
+html
+{
+    height: 100%;
+    /* overflow: hidden; */
+}
+
+body
+{
+    font-family: 'Montserrat', sans-serif, Arial;
+    font-size: 20px; 	
+    line-height: 35px;
+    font-weight: 400;	
+    color: #f6f6fc;
+    /* height: 100%; */
+    background-color: #2b3344;
+}
+
+body a
+{
+    text-decoration: none;
+    color: #f6f6fc;
+}
+
+body a:hover
+{
+    color: #e2e2e2;
+}
+
+input, textarea, select 
+{
+    -webkit-appearance: none;
+}
+
+.doc-loader 
+{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;	
+    background-color: white;
+}
+
+.doc-loader td 
+{       
+    text-align: center;
+    vertical-align: middle;
+}
+
+.doc-loader img
+{
+    width: 120px;
+    height: 120px;        
+}
+
+.rubberplant
+{
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    border-color: #ff0000;
+}
+
+.header-holder
+{
+    top: 60px;    
+    position: absolute;
+    right: 0;
+}
+
+.header-logo
+{
+    padding-top: 12%;
+    margin-bottom: 50px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+
+}
+
+.header-holder .fa-search
+{
+    color: white;
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    margin-right: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+#header-main-menu
+{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100% !important;
+    background-color: rgba(31,37,49,0.98);
+    top: 0;
+    left: 0;
+    text-align: center;
+    z-index: 10;
+    /* overflow: auto; */
+}
+
+.main-menu.sm-clean
+{
+    background-color: transparent;
+    padding-top: 220px;
+    padding-bottom: 150px;
+}
+
+.sm-clean a
+{
+    color: #ffffff;
+    font-size: 39px;
+}
+
+.sm-clean li
+{
+    border: none;
+}
+
+ul.sub-menu
+{
+    max-width: 100% !important;
+    width: 100% !important;
+    min-width: 0 !important;
+}
+
+.sub-menu li
+{
+    display: block;
+}
+
+.sm-clean a span.sub-arrow
+{
+    background-color: transparent;
+}
+
+.sm-clean a.current, .sm-clean a:hover, .sm-clean a:focus, .sm-clean a:active, 
+.sm-clean a.highlighted, .sm-clean ul a:hover, .sm-clean ul a:focus, 
+.sm-clean ul a:active, .sm-clean ul a.highlighted
+{
+    color: #e2e2e2;
+}
+
+.content-1170
+{
+    max-width: 1170px;
+}
+
+.content-1030
+{
+    max-width: 1030px;
+}
+
+.content-770
+{
+    max-width: 770px;
+}
+
+.content-1170 img, .content-770 img, .content-1030 img
+{
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+.toggle-holder
+{
+    width: 32px;
+    height: 27px;
+    margin-right: 60px;
+}
+
+#toggle
+{
+    width: 32px;
+    height: 27px;
+    display: inline-block;
+    position: absolute;
+    z-index: 99;
+}
+
+#toggle:hover
+{
+    cursor: pointer;
+}
+
+#toggle div, #toggle
+{
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+#toggle .first-menu-line
+{
+    width: 28px;
+    height: 6px;
+    margin-bottom: 6px;
+    background-color: #ffffff;
+    margin-left: 4px;
+}
+
+#toggle .second-menu-line
+{
+    width: 22px;
+    height: 4px;
+    margin-bottom: 6px;
+    background-color: #ffffff;
+    margin-left: 10px;
+}
+
+#toggle .third-menu-line
+{
+    width: 32px;
+    height: 5px;
+    background-color: #ffffff;
+}
+
+#toggle.on .first-menu-line
+{    
+    margin-left: 0;
+}
+
+#toggle.on .second-menu-line
+{
+    margin-left: 0;
+}
+
+/* FOOTER */
+
+.footer
+{
+    margin-top: 110px;
+    padding-bottom: 110px;
+    clear: both;
+    color: #ffffff;
+    justify-content: center;
+    background-color: #1c375f;
+}
+
+.footer a
+{
+    color: #ffffff;
+}
+
+.footer a:hover
+{
+    color: #1fafa8;
+    /* color: #3985f7; */
+}
+
+ul#footer-sidebar li.widget 
+{
+    width: 30.6%;
+    margin-right: 4%;
+    float: left;
+    margin-bottom: 50px;
+    text-align: center;    
+}
+
+.footer .fa-heart
+{
+    color: #e76f7d;
+    -webkit-animation: pulse 1s linear infinite;
+    -moz-animation: pulse 1s linear infinite;
+    -ms-animation: pulse 1s linear infinite;
+    animation: pulse 1s infinite;
+}
+

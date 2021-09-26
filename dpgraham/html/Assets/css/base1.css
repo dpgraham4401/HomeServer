@@ -1,0 +1,213 @@
+html
+{
+    height: 100%;
+    overflow: hidden;
+}
+
+body
+{
+    font-family: 'Montserrat', sans-serif, Arial;
+    font-size: 20px; 	
+    line-height: 35px;
+    font-weight: 400;	
+    color: #f6f6fc;
+    /* height: 100%; */
+    background-color: #2b3344;
+}
+
+body a
+{
+    text-decoration: none;
+    color: #f6f6fc;
+}
+
+body a:hover
+{
+    color: #e2e2e2;
+}
+
+/* input, textarea, select 
+{
+    -webkit-appearance: none;
+} */
+
+.doc-loader 
+{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;	
+    background-color: white;
+}
+
+.doc-loader td 
+{       
+    text-align: center;
+    vertical-align: middle;
+}
+
+.doc-loader img
+{
+    width: 120px;
+    height: 120px;        
+}
+
+.rubberplant img
+{
+    width: 120px;
+    height: 120px;        
+}
+
+.header-holder
+{
+    top: 60px;    
+    position: absolute;
+    right: 0;
+}
+
+.header-logo
+{
+    padding-top: 12%;
+    margin-bottom: 50px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.header-holder .fa-search
+{
+    color: white;
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    margin-right: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+#header-main-menu
+{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100% !important;
+    background-color: rgba(31,37,49,0.98);
+    top: 0;
+    left: 0;
+    text-align: center;
+    z-index: 10;
+    /* overflow: auto; */
+}
+
+.main-menu.sm-clean
+{
+    background-color: transparent;
+    padding-top: 220px;
+    padding-bottom: 150px;
+}
+
+.sm-clean a
+{
+    color: #ffffff;
+    font-size: 39px;
+}
+
+.sm-clean li
+{
+    border: none;
+}
+
+/* ul.sub-menu
+{
+    max-width: 100% !important;
+    width: 100% !important;
+    min-width: 0 !important;
+} */
+
+.sub-menu li
+{
+    display: block;
+}
+
+.sm-clean a span.sub-arrow
+{
+    background-color: transparent;
+}
+
+.sm-clean a.current, .sm-clean a:hover, .sm-clean a:focus, .sm-clean a:active, 
+.sm-clean a.highlighted, .sm-clean ul a:hover, .sm-clean ul a:focus, 
+.sm-clean ul a:active, .sm-clean ul a.highlighted
+{
+    color: #e2e2e2;
+}
+
+.toggle-holder
+{
+    width: 32px;
+    height: 27px;
+    margin-right: 60px;
+}
+
+#toggle
+{
+    width: 32px;
+    height: 27px;
+    display: inline-block;
+    position: absolute;
+    z-index: 99;
+}
+
+#toggle:hover
+{
+    cursor: pointer;
+}
+
+#toggle div, #toggle
+{
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+#toggle .first-menu-line
+{
+    width: 28px;
+    height: 6px;
+    margin-bottom: 6px;
+    background-color: #ffffff;
+    margin-left: 4px;
+}
+
+#toggle .second-menu-line
+{
+    width: 22px;
+    height: 4px;
+    margin-bottom: 6px;
+    background-color: #ffffff;
+    margin-left: 10px;
+}
+
+#toggle .third-menu-line
+{
+    width: 32px;
+    height: 5px;
+    background-color: #ffffff;
+}
+
+#toggle.on .first-menu-line
+{    
+    margin-left: 0;
+}
+
+#toggle.on .second-menu-line
+{
+    margin-left: 0;
+}
+
