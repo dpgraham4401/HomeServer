@@ -1,3 +1,4 @@
+#!/usr/bin/node
 console.log('Server-side code running');
 
 const express = require('express');
@@ -15,41 +16,37 @@ app.listen(8080, () => {
 
 // serve the homepage
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/index.html');
+  res.sendFile(__dirname + '/public/index.html');
 });
 
 app.post('/volDown', (req, res) => {
   // const click = {VolumeDown: new Date()};
   // console.log(click);
   child_process.exec('pactl set-sink-volume @DEFAULT_SINK@ -5%')
-  return res.json({data: "algood"})
+  return // res.json({data: "algood"})
 })
 
 app.post('/volUp', (req, res) => {
-  // const click = {VolumeUp: new Date()};
-  // console.log(click);
   child_process.exec('pactl set-sink-volume @DEFAULT_SINK@ +5%')
-  return res.json({data: "algood"})
+  return 
 })
 
 app.post('/volMute', (req, res) => {
-  // const click = {VolumeMute: new Date()};
-  // console.log(click);
   child_process.exec('pactl set-sink-mute @DEFAULT_SINK@ toggle')
-  return res.json({data: "algood"})
+  return
 })
 
 app.post('/playPause', (req, res) => {
   child_process.exec('playerctl play-pause')
-  return res.json({data: "algood"})
+  return
 })
 
 app.post('/next', (req, res) => {
   child_process.exec('playerctl next')
-  return res.json({data: "algood"})
+  return
 })
 
 app.post('/previous', (req, res) => {
   child_process.exec('playerctl previous')
-  return res.json({data: "algood"})
+  return
 })
