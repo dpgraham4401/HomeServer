@@ -2,19 +2,20 @@ const { Control } = require('magic-home')
 async function daytime () {
   try {
     const hour = (new Date()).getHours()
-    const ledip = "192.168.1.7"
+    const ledip = "192.168.1.2"
     let control = new Control(ledip, {ack: Control.ackMask(1) })
-    if (hour > 22 || hour < 7) {
+    if (hour > 23 || hour < 6) {
+      await control.setColorWithBrightness(255, 150, 50, 0.75)
       console.log('Status: off')
       process.exit(0)
     } else {
       switch(hour) {
-        case 7:
-          await control.setColorWithBrightness(255, 150, 50, 50)
+        case 6:
+          await control.setColorWithBrightness(255, 150, 50, 20)
           logLeds()
           break
-        case 8:
-          await control.setColorWithBrightness(255, 150, 50, 75)
+        case 7:
+          await control.setColorWithBrightness(255, 150, 50, 50)
           logLeds()
           break
         case 19:
@@ -26,11 +27,15 @@ async function daytime () {
           logLeds()
           break
         case 21:                                                 
-          await control.setColorWithBrightness(255, 150, 50, 30)
+          await control.setColorWithBrightness(255, 150, 50, 15)
           logLeds()
           break
         case 22:                                                 
-          await control.setColorWithBrightness(255, 150, 50, 15)
+          await control.setColorWithBrightness(255, 150, 50, 1)
+          logLeds()
+          break
+        case 23:                                                 
+          await control.setColorWithBrightness(255, 150, 50, 0.75)
           logLeds()
           break
         default:                                                 
