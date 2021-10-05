@@ -3,3 +3,4 @@ LedControl/node_modules
 nextcloud
 reverse-proxy/letsencrypt
 reverse-proxy/data
+synapse/data/*.key
