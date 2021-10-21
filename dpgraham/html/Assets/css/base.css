@@ -1,7 +1,7 @@
 /* BASE ITEMS */
 html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, code, em, img, q, strong, sub, var,
+h1, h2, h3, h4, h5, h6, p, pre,
+em, img, q, strong, sub, var,
 b, i, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
@@ -30,16 +30,6 @@ nav ul,ul,ol {
     list-style:none;
 }
 
-blockquote, q {
-    quotes:none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content:'';
-    content:none;
-}
-
 a {
     margin:0;
     padding:0;
@@ -54,15 +44,6 @@ table {
     border-spacing:0;
 }
 
-/* hr {
-    display:block;
-    height:1px;
-    border:0;   
-    border-top:1px solid #cccccc;
-    margin:1em 0;
-    padding:0;
-} */
-
 input, select {
     vertical-align:middle;
 }
@@ -72,14 +53,6 @@ input:focus, textarea:focus
     outline: none;
 }
 
-.block
-{
-    display: block;
-}
-.hidden
-{
-    display: none;
-}
 .clear
 {
     clear: both;
@@ -101,36 +74,12 @@ input:focus, textarea:focus
 {
     text-align: center !important;
 }
-.absolute
-{
-    position: absolute;
-}
-.fixed
-{
-    position: fixed;
-}
 .relative
 {
     position: relative;
 }
 .italic {
     font-style: italic;
-}
-blockquote
-{
-    margin-top: 70px;
-    margin-bottom: 60px;
-    font-family: 'Montserrat', sans-serif, Arial;
-    font-size: 24px;
-    line-height: 44px;
-    color: #b5b5b5;
-}
-blockquote.inline-blockquote
-{
-    width: 480px;
-    float: left;
-    margin-left: -170px;
-    margin-right: 70px;
 }
 a.button
 {
@@ -427,3 +376,66 @@ ul.sub-menu
     color: #1fafa8;
     text-decoration: none;
   }
+
+/* BLOG */
+
+.blog-top-content-holder canvas
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.blog-top-content-holder h1.entry-title
+{
+    font-size: 56px;
+    line-height: 60px;   
+    margin-bottom: 40px;    
+}
+
+.blog-top-content-holder p.site-description
+{
+    font-size: 26px;
+    line-height: 35px;
+    max-width: 870px;
+    margin: 0 auto;   
+}
+
+.blog-top-content
+{
+    padding-bottom: 100px;
+    z-index: 1;
+}
+
+.blog-top-content, .blog-top-content a
+{
+    color: #ffffff;
+}
+
+.blog-item-holder, .blog-item-holder a
+{
+    color: #ffffff;
+}
+
+.blog-item-holder a:hover
+{
+    color: #1fafa8;
+}
+
+.blog-item-holder .entry-content:before
+{
+    width: 100%;
+    /* height: 100%; */
+    /* opacity: 0.38; */
+    /* line-height: 0; */
+    /* font-size: 0;    */
+    position: absolute;
+}
+
+.blog-item-holder .entry-content .content-1170
+{
+    padding-top: 17%;
+    padding-bottom: 200px;
+    position: relative;
+}

@@ -1,0 +1,19 @@
+.header-icon {
+	margin: 40px;
+}
+
+.article-date {
+	font-size: .65em;
+	margin-left: 20px;
+	margin-top: -10px;
+}
+
+.blog-content{
+	margin-top: -50px;
+}
+
+.article-text {
+	font-size: .8em;
+	text-indent: 50px;
+	line-height: 1.75;
+}
