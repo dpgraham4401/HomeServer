@@ -65,7 +65,7 @@ pid_file: /data/homeserver.pid
 # Otherwise, it should be the URL to reach Synapse's client HTTP listener (see
 # 'listeners' below).
 #
-#public_baseurl: https://example.com/
+public_baseurl: https://matrix.dpgraham.com
 
 # Set the soft limit on the number of file descriptors synapse can use
 # Zero is used to indicate synapse should set the soft limit to the
@@ -113,7 +113,7 @@ presence:
 # If set to 'true', allows any other homeserver to fetch the server's public
 # rooms directory via federation. Defaults to 'false'.
 #
-#allow_public_rooms_over_federation: true
+allow_public_rooms_over_federation: true
 
 # The default room version for newly created rooms.
 #
