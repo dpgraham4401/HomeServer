@@ -4,3 +4,4 @@ nextcloud
 reverse-proxy/letsencrypt
 reverse-proxy/data
 synapse/data/*.key
+spamfilter/venv
