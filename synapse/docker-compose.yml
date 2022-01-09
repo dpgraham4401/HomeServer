@@ -6,7 +6,7 @@ services:
         restart: always
         # container_name: "synapse"
         volumes:
-            - "./data:/data"
+            - "/home/dg/ssd/data:/data"
         environment:
             VIRTUAL_HOST: "matrix.dpgraham.com"
             VIRTUAL_PORT: 8008
