@@ -1,19 +1,18 @@
 package main
 
 import (
-	"fmt"
 	"net"
 	"os"
-
-	// "os"
 	"time"
+	"log"
+	"strconv"
 
 	magichome "github.com/moonliightz/magic-home/pkg"
 )
 
-func checkError(e error) {
-	if e != nil {
-		fmt.Println("Error: ", e)
+func checkError(err error) {
+	if err != nil {
+		log.Println(err)
 		os.Exit(1)
 	}
 }
@@ -49,9 +48,19 @@ func setColor(localController magichome.Controller, red uint8, green uint8, blue
 	})
 }
 
+func logLights(message string) {
+        file, err := os.OpenFile("/home/pi/.homelight.log", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
+        if err != nil {
+            log.Fatal(err)
+        }
+	log.SetOutput(file)
+	log.Print(message)
+}
+
 func main() {
 
 	hours, _ := getTime()
+	logLights("case: " + strconv.Itoa(hours))
 
 	ipAddresses := getAddress()
 
@@ -59,24 +68,28 @@ func main() {
 	checkError(err)
 
 	switch hours {
-	case 15:
-		setColor(*controller, 125, 125, 100, 0)
 	case 16:
-		setColor(*controller, 100, 100, 75, 0)
-	case 17, 18:
-		setColor(*controller, 75, 75, 40, 0)
-	case 19, 20, 21, 22:
-		setColor(*controller, 50, 50, 20, 0)
-	case 8:
-		setColor(*controller, 75, 75, 40, 0)
-	case 9:
-		setColor(*controller, 100, 100, 75, 0)
-	case 10, 11:
 		setColor(*controller, 125, 125, 100, 0)
-	case 12, 13, 14:
-		setColor(*controller, 150, 150, 150, 0)
+	case 17:
+		setColor(*controller, 75, 75, 40, 0)
+	case 18:
+		setColor(*controller, 50, 50, 30, 0)
+	case 19, 20:
+		setColor(*controller, 30, 30, 10, 0)
+	case 21, 22:
+		setColor(*controller, 5, 5, 2, 0)
+	case 6:
+		setColor(*controller, 50, 50, 25, 0)
+	case 7:
+		setColor(*controller, 75, 75, 50, 0)
+	case 8:
+		setColor(*controller, 100, 100, 75, 0)
+	case 9:
+		setColor(*controller, 175, 175, 150, 0)
+	case 10, 11, 12, 13, 14, 15:
+		setColor(*controller, 250, 250, 250, 0)
 	default:
-		setColor(*controller, 30, 30, 15, 0)
+		setColor(*controller, 10, 10, 5, 0)
 
 	}
 
