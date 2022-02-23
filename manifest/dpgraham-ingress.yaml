@@ -1,14 +1,20 @@
 kind: Ingress
 apiVersion: networking.k8s.io/v1
 metadata:
-  name: dpgraham 
+  name: dpgraham
   namespace: dpgraham
   annotations:
-    traefik.ingress.kubernetes.io/router.entrypoints: web
-
+    kubernetes.io/ingress.class: "traefik"
+    cert-manager.io/cluster-issuer: le-issuer
+    traefik.ingress.kubernetes.io/router.tls: "true"
 spec:
+  tls:
+  - hosts:
+    - dpgraham.com
+    secretName: le-prod
   rules:
-    - http:
+    - host: dpgraham.com
+      http:
         paths:
           - path: /
             pathType: Prefix
@@ -17,3 +23,24 @@ spec:
                 name: dpgraham
                 port:
                   number: 80
+#########################
+# Without TLS
+# kind: Ingress
+# apiVersion: networking.k8s.io/v1
+# metadata:
+#   name: dpgraham
+#   namespace: dpgraham
+#   annotations:
+#     traefik.ingress.kubernetes.io/router.entrypoints: web
+
+# spec:
+#   rules:
+#     - http:
+#         paths:
+#           - path: /
+#             pathType: Prefix
+#             backend:
+#               service:
+#                 name: dpgraham
+#                 port:
+#                   number: 80

@@ -1,3 +1,8 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: dpgraham
+
 kind: Deployment
 apiVersion: apps/v1
 metadata:
@@ -6,7 +11,6 @@ metadata:
   labels:
     app: dpgraham
     name: dpgraham
-
 spec:
   replicas: 3
   selector:

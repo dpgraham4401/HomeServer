@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: dpgraham
+  namespace: dpgraham
+spec:
+  secretName: le-prod-staging
+  issuerRef:
+    name: le-issuer-staging
+    kind: ClusterIssuer
+  # commonName: dpgraham.com
+  dnsNames:
+  - dpgraham.com
