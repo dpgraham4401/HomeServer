@@ -1,0 +1,24 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: dpgraham
+  namespace: dpgraham
+  labels:
+    app: dpgraham
+    name: dpgraham
+
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: dpgraham
+  template:
+    metadata:
+      labels:
+        app: dpgraham
+    spec:
+      containers:
+        - name: dpgraham
+          image: dpgraham4401/dpgraham:v0.0.1
+          ports:
+            - containerPort: 80
