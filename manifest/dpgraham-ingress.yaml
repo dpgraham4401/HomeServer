@@ -23,30 +23,7 @@ spec:
                 name: dpgraham
                 port:
                   number: 80
-#########################
-# Without TLS
-# kind: Ingress
-# apiVersion: networking.k8s.io/v1
-# metadata:
-#   name: dpgraham-http
-#   namespace: dpgraham
-#   annotations:
-#     traefik.ingress.kubernetes.io/router.entrypoints: web
-
-# spec:
-#   rules:
-#     - http:
-#         paths:
-#           - path: /
-#             pathType: Prefix
-#             backend:
-#               service:
-#                 name: dpgraham
-#                 port:
-#                   number: 80
-#
-###
-# HTTP as a traefik IngressRoute instead of k8 Ingress
+# HTTP IngressRoute (from traefik instead of k8)
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
