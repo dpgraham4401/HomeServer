@@ -1,0 +1,17 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: dpgraham-http-ingressroute
+spec:
+  entryPoints:
+    - web
+  routes:
+  - kind: Rule
+    match: Path(`/`)
+    services:
+    - kind: Service
+      name: dpgraham
+      port: 80
+    middlewares:
+    - name: redirecthttp
+

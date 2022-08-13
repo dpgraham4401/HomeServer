@@ -1,12 +1,11 @@
-kind: Ingress
 apiVersion: networking.k8s.io/v1
+kind: Ingress
 metadata:
   name: dpgraham
   namespace: dpgraham
   annotations:
-    kubernetes.io/ingress.class: "traefik"
-    cert-manager.io/cluster-issuer: le-issuer
-    traefik.ingress.kubernetes.io/router.tls: "true"
+    kubernetes.io/ingress.class: traefik
+    traefik.ingress.kubernetes.io/router.middlewares: dpgraham-redirecthttp@kubernetescrd
 spec:
   tls:
   - hosts:
@@ -23,21 +22,3 @@ spec:
                 name: dpgraham
                 port:
                   number: 80
-# HTTP IngressRoute (from traefik instead of k8)
-apiVersion: traefik.containo.us/v1alpha1
-kind: IngressRoute
-metadata:
-  name: dpgraham-http-ingressroute
-spec:
-  entryPoints:
-    - web
-  routes:
-  - kind: Rule
-    match: Path(`/`)
-    services:
-    - kind: Service
-      name: dpgraham
-      port: 80
-    middlewares:
-    - name: redirecthttp
-
