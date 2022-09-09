@@ -1,3 +1,5 @@
+.idea/
+**/*.DS_Store
 RemoteControl/node_modules/
 LedControl/node_modules
 nextcloud
